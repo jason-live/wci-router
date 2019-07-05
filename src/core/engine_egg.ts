@@ -5,7 +5,6 @@ class EngineEgg extends Engine {
     if (this.prefix) this.router.prefix(this.prefix);
     this.initData.map((i: any) => {
       const p = i.ctrPath + i.path;
-      console.log(p);
       this.router[i.methodType](p, i.method);
     });
   }
